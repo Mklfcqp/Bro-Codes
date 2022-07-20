@@ -1,0 +1,67 @@
+VERZE 1. (Pouze třída Main)
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javafx.scene.paint.Color;
+import oracle.jrockit.jfr.JFR;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame(); //creates a frame
+        frame.setTitle("JFrame title goes here"); //sets title of frame
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+        frame.setResizable(false); //prevent frame from being resized
+        frame.setSize(420, 420); //sets the x-dimension, and y-dimension of frame
+        frame.setVisible(true); //make frame visible
+
+        ImageIcon image = new ImageIcon("název"); //create an ImageIcon
+        frame.setIconImage(image.getImage()); //change icon of frame
+        frame.getContentPane().setBackground(new Color(123, 50, 250)); //change color of background
+
+    }    
+}
+
+
+
+
+
+
+
+VERZE 2. (2 třídy - Main a MyFrame)
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyFrame myFrame = new MyFrame(); //creates a frame
+
+    }    
+}
+
+
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javafx.scene.paint.Color;
+import oracle.jrockit.jfr.JFR;
+
+public class MyFrame extends JFrame{
+
+    MyFrame() {
+
+        this.setTitle("JFrame title goes here"); //sets title of frame
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+        this.setResizable(false); //prevent frame from being resized
+        this.setSize(420, 420); //sets the x-dimension, and y-dimension of frame
+        this.setVisible(true); //make frame visible
+
+        ImageIcon image = new ImageIcon("název"); //create an ImageIcon
+        this.setIconImage(image.getImage()); //change icon of frame
+        this.getContentPane().setBackground(new Color(123, 50, 250)); //change color of background
+
+    }
+    
+}
